@@ -17,23 +17,16 @@
 
   <div class="topbar">
     <div class="brand">
-      <div class="radar">
-        <svg viewBox="0 0 40 40" class="radar-svg">
-          <circle cx="20" cy="20" r="18" class="radar-ring radar-ring-1"/>
-          <circle cx="20" cy="20" r="12" class="radar-ring radar-ring-2"/>
-          <circle cx="20" cy="20" r="6" class="radar-ring radar-ring-3"/>
-          <g class="radar-sweep-group">
-            <path d="M20 20 L20 2 A18 18 0 0 1 34.7 11.3 Z" class="radar-sweep"/>
-          </g>
-          <circle cx="20" cy="20" r="2.2" class="radar-core"/>
-        </svg>
-      </div>
+      <canvas id="plasmaOrb" width="72" height="72" class="plasma-orb"></canvas>
       <div>
         <div class="brand-name">VOYAGER</div>
-        <div class="brand-sub">RAHUL'S COMPANION <span id="statusText">ONLINE</span></div>
+        <div class="brand-sub">RAHUL'S COMPANION <span id="statusText">CHARGED</span></div>
       </div>
     </div>
-    <button class="icon-btn" id="settingsBtn" title="Settings">⚙</button>
+    <div class="topbar-actions">
+      <button class="icon-btn" id="speakToggleBtn" title="Toggle voice replies">🔇</button>
+      <button class="icon-btn" id="settingsBtn" title="Settings">⚙</button>
+    </div>
   </div>
 
   <div class="tabs">
@@ -46,8 +39,12 @@
     <div class="log" id="log">
       <div class="msg-empty" id="emptyMsg">// no signal yet — say something to start //</div>
     </div>
+    <div id="imagePreviewBar" class="image-preview-bar"></div>
     <div class="composer">
+      <button class="icon-btn composer-btn" id="attachBtn" title="Attach image">📎</button>
+      <input type="file" id="fileInput" accept="image/*" style="display:none" />
       <input type="text" id="chatInput" placeholder="type your message..." />
+      <button class="icon-btn composer-btn" id="micBtn" title="Voice input">🎤</button>
       <button class="send-btn" id="sendBtn">SEND</button>
     </div>
   </div>

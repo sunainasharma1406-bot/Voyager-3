@@ -45,7 +45,11 @@ you can only "Install" as an app once it's on a real HTTPS URL (like GitHub Page
 ## What it does
 
 - **TRANSMISSION** — chat with Voyager, powered by Gemini (free tier)
+  - 📎 attach an image to your message (Voyager can see it)
+  - 🎤 tap to talk instead of typing (voice-to-text, Chrome only)
+  - 🔊 toggle in the top bar — Voyager reads its replies aloud
 - **OBJECTIVES** — your reminders / to-do list, saved in the browser
+- Live plasma-orb animation in the header (glowing, canvas-based)
 
 ## Known limits (be aware)
 
@@ -54,5 +58,8 @@ you can only "Install" as an app once it's on a real HTTPS URL (like GitHub Page
 - Data (chat history, objectives, API key) is stored in **this browser only** —
   switching phone ↔ PC won't sync automatically
 - No push notifications for objectives — it's a checklist, not an alarm
+- Voice input (🎤) needs Chrome — Safari/Firefox don't support it well
+- Voice output (🔊) reads in an English-accented voice — it can't truly speak Hinglish, so replies with heavy Hindi words may sound off
+- Images are sent directly to Gemini per message — they aren't kept in long-term history to avoid bloating browser storage
 - Google's free tier may use your inputs to improve their models (their policy,
   not something this app controls) — don't paste sensitive personal info into chat
